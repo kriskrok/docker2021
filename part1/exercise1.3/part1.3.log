@@ -1,0 +1,34 @@
+Script started on 2021-06-06 13:09:27+03:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="117" LINES="27"]
+]777;notify;Command completed;exit\]777;precmd\]0;veikko@blackstorm:~/workspace/devops-with-docker/part1_new\]7;file://blackstorm/home/veikko/workspace/devops-with-docker/part1_new\[[0;36mveikko@blackstorm[m: …/workspace/devops-with-docker/part1_new[0;36m[m]
+ [1;36m└─[m$ docker run -d --rm --name secret devopsdockeruh/simple-web-service:ubuntu
+]777;preexec\0a3e718521155db29ee03fcaf1702834c926f14fc4aa289f1329ffc5fdc96981
+]777;notify;Command completed;docker run -d --rm --name secret devopsdockeruh/simple-web-service:ubuntu\]777;precmd\]0;veikko@blackstorm:~/workspace/devops-with-docker/part1_new\]7;file://blackstorm/home/veikko/workspace/devops-with-docker/part1_new\[[0;36mveikko@blackstorm[m: …/workspace/devops-with-docker/part1_new[0;36m[m]
+ [1;36m└─[m$ docker exec -it secret bash
+]777;preexec\]0;root@0a3e71852115: /usr/src/approot@0a3e71852115:/usr/src/app# grep -i secret - ./text.log 
+[01;31m[KSecret[m[K message is: 'You can find the source code here: https://github.com/docker-hy'
+]0;root@0a3e71852115: /usr/src/approot@0a3e71852115:/usr/src/app# tail -f ./text.log 
+2021-06-06 10:09:38 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2021-06-06 10:09:40 +0000 UTC
+2021-06-06 10:09:42 +0000 UTC
+2021-06-06 10:09:44 +0000 UTC
+2021-06-06 10:09:46 +0000 UTC
+2021-06-06 10:09:48 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2021-06-06 10:09:50 +0000 UTC
+2021-06-06 10:09:52 +0000 UTC
+2021-06-06 10:09:54 +0000 UTC
+2021-06-06 10:09:56 +0000 UTC
+2021-06-06 10:09:58 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2021-06-06 10:10:00 +0000 UTC
+2021-06-06 10:10:02 +0000 UTC
+2021-06-06 10:10:04 +0000 UTC
+^C
+]0;root@0a3e71852115: /usr/src/approot@0a3e71852115:/usr/src/app# exit
+exit
+]777;notify;Command completed;docker exec -it secret bash\]777;precmd\]0;veikko@blackstorm:~/workspace/devops-with-docker/part1_new\]7;file://blackstorm/home/veikko/workspace/devops-with-docker/part1_new\[[0;36mveikko@blackstorm[m: …/workspace/devops-with-docker/part1_new[0;36m[m]
+ [1;36m└─[m$ exit
+]777;preexec\exit
+
+Script done on 2021-06-06 13:10:06+03:00 [COMMAND_EXIT_CODE="130"]

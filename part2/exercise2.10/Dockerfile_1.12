@@ -1,0 +1,27 @@
+FROM node:14
+
+EXPOSE 5000
+
+WORKDIR /usr/src/app
+
+# Declare backend URL
+ENV REACT_APP_BACKEND_URL=http://localhost:8080
+
+# Copy (all) content from the project to the image
+COPY . .
+
+# install all packages
+RUN npm install
+
+# fix found vulnerabilities
+RUN npm audit fix
+
+# build static files
+RUN npm run build
+
+# install and set serve
+RUN npm install -g serve
+
+# -s, --single rewrite all not-found requests to 'index.html'
+# -l, --listen Specify a URI endpoint on which to listen
+CMD serve -s -l 5000 build

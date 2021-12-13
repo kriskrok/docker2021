@@ -1,0 +1,35 @@
+Script started on 2021-06-14 23:50:49+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="124" LINES="23"]
+]777;notify;Command completed;exit\]777;precmd\]0;veikko@blackstorm:~/workspace/devops-with-docker/part1_new\]7;file://blackstorm/home/veikko/workspace/devops-with-docker/part1_new\[[0;36mveikko@blackstorm[m: …/workspace/devops-with-docker/part1_new[0;36m[m]
+ [1;36m└─[m$ touch text.log && docker run -v "$(pwd)/text.log:/usr/src/app/text.log" devopsdockeruh/simple-web-service
+]777;preexec\Unable to find image 'devopsdockeruh/simple-web-service:latest' locally
+latest: Pulling from devopsdockeruh/simple-web-service
+
+[1A[2Kcd2b813b068d: Pulling fs layer [1B
+[1A[2K4f4fb700ef54: Pulling fs layer [1B[2A[2Kcd2b813b068d: Downloading [>                                                  ]  52.43kB/5.117MB[2B[1A[2K4f4fb700ef54: Downloading [==================================================>]      32B/32B[1B[1A[2K4f4fb700ef54: Download complete [1B[2A[2Kcd2b813b068d: Downloading [============>                                      ]  1.289MB/5.117MB[2B[2A[2Kcd2b813b068d: Downloading [========================>                          ]  2.517MB/5.117MB[2B[2A[2Kcd2b813b068d: Downloading [====================================>              ]  3.738MB/5.117MB[2B[2A[2Kcd2b813b068d: Downloading [================================================>  ]   4.95MB/5.117MB[2B[2A[2Kcd2b813b068d: Verifying Checksum [2B[2A[2Kcd2b813b068d: Download complete [2B[2A[2Kcd2b813b068d: Extracting [>                                                  ]  65.54kB/5.117MB[2B[2A[2Kcd2b813b068d: Extracting [=========>                                         ]    983kB/5.117MB[2B[2A[2Kcd2b813b068d: Extracting [===========================>                       ]  2.818MB/5.117MB[2B[2A[2Kcd2b813b068d: Extracting [==================================================>]  5.117MB/5.117MB[2B[2A[2Kcd2b813b068d: Pull complete [2B[1A[2K4f4fb700ef54: Extracting [==================================================>]      32B/32B[1B[1A[2K4f4fb700ef54: Extracting [==================================================>]      32B/32B[1B[1A[2K4f4fb700ef54: Pull complete [1BDigest: sha256:20282b20abae04beefa9637bb565943330ed5d085a22fcf8c4878abad80be712
+Status: Downloaded newer image for devopsdockeruh/simple-web-service:latest
+Starting log output
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+^ZWrote text to /usr/src/app/text.log
+^CWrote text to /usr/src/app/text.log
+]777;notify;Command completed;touch text.log && docker run -v "$(pwd)/text.log:/usr/src/app/text.log" devopsdockeruh/simple-web-service\]777;precmd\]0;veikko@blackstorm:~/workspace/devops-with-docker/part1_new\]7;file://blackstorm/home/veikko/workspace/devops-with-docker/part1_new\[[0;36mveikko@blackstorm[m: …/workspace/devops-with-docker/part1_new[0;36m[m]
+ [1;36m└─[m$ t[Kcat ./text.log 
+]777;preexec\2021-06-14 20:50:55 +0000 UTC
+2021-06-14 20:50:57 +0000 UTC
+2021-06-14 20:50:59 +0000 UTC
+2021-06-14 20:51:01 +0000 UTC
+2021-06-14 20:51:03 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2021-06-14 20:51:05 +0000 UTC
+2021-06-14 20:51:07 +0000 UTC
+2021-06-14 20:51:09 +0000 UTC
+]777;notify;Command completed;cat ./text.log \]777;precmd\]0;veikko@blackstorm:~/workspace/devops-with-docker/part1_new\]7;file://blackstorm/home/veikko/workspace/devops-with-docker/part1_new\[[0;36mveikko@blackstorm[m: …/workspace/devops-with-docker/part1_new[0;36m[m]
+ [1;36m└─[m$ exit
+]777;preexec\exit
+
+Script done on 2021-06-14 23:51:22+03:00 [COMMAND_EXIT_CODE="0"]

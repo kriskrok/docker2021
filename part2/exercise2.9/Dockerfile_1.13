@@ -1,0 +1,17 @@
+FROM golang:1.16-bullseye
+
+EXPOSE 8080
+
+WORKDIR /usr/src/app
+
+COPY . .
+
+# Run build, generates 'server' binary
+RUN go build
+
+# port defaults to 8080 and CORS might not be relevant to local env running in localhost, but declared here for brevity.
+ENV PORT=8080 \
+    REQUEST_ORIGIN=http://localhost:5000
+
+# execute the file 'server'
+CMD ./server

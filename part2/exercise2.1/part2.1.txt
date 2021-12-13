@@ -1,0 +1,8 @@
+2.1:
+
+Do make sure that there exists the log file text.log before invocating compose up. Otherwise you'll end up getting odd error about trying to map folder to a file.
+
+
+Command used:
+
+$ docker-compose -f ./docker-compose_2.1.yaml up

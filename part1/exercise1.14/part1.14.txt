@@ -1,0 +1,13 @@
+1.14: Environment
+
+
+Added ENV -variable REACT_APP_BACKEND_URL=http://localhost to frontend-example's Dockerfile. After rebuilding the image for example-frontend both images could be run with the following incantations.
+
+
+Commands used:
+
+$ docker build -f ./Dockerfile_1.12 -t example-frontend:dockerized .
+$ docker build -f ./Dockerfile_1.13 -t example-backend:dockerized .
+
+$ docker run -d -p 5000:5000/tcp --name front example-frontend:dockerized
+$ docker run -d -p 8080:8080/tcp --name back example-backend:dockerized

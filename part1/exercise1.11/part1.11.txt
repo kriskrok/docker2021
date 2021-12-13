@@ -1,0 +1,14 @@
+1.11: Spring
+
+The Dockerfile was intended to be based on AdoptOpenJDK, which alas is officially deprecated as of 01/08/2021. See <https://hub.docker.com/_/adoptopenjdk> for deprecation notice. Ergo, the image uses OpenJDK binaries built by Eclipse Temurin.
+
+The image was build using the Java Spring project's git URL as remote context and a local handmade Dockerfile that was piped to STDIN. This was inspired by <https://stackoverflow.com/questions/61901955/docker-compose-build-with-url-context-and-local-dockerfile>
+
+
+Commands used:
+
+$ docker build -f- < ./Dockerfile_1.11 https://github.com/docker-hy/material-applications.git#main:spring-example-project -t spring-example:dockerized
+
+$ docker run -d -p 49123:8080/tcp spring-example:dockerized
+
+$ curl -iX POST http://localhost:49123 | grep Success

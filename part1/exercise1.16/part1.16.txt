@@ -1,0 +1,6 @@
+1.16: Heroku
+
+
+Released application can be found at:
+
+	https://maaningan-marisijat.herokuapp.com/

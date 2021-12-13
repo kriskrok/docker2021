@@ -1,0 +1,9 @@
+1.10: Ports open
+
+I had the image build in exercise 1.7 named and tagged as 'simple-web-service:web-server'.
+
+
+Commands used:
+
+$ docker run -d -p 49123:8080/tcp simple-web-service:web-server
+$ curl http://localhost:49123

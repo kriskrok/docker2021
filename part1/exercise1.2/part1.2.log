@@ -1,0 +1,51 @@
+Script started on 2021-06-06 10:52:24+03:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="83" LINES="22"]
+]777;notify;Command completed;exit\]777;precmd\]0;veikko@blackstorm:~/workspace/devops-with-docker/part1_new\]7;file://blackstorm/home/veikko/workspace/devops-with-docker/part1_new\[[0;36mveikko@blackstorm[m: …/workspace/devops-with-docker/part1_new[0;36m[m]
+ [1;36m└─[m$ docker pas[K[Ks -a[Kas
+]777;preexec\CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS                     PORTS     NAMES                 SIZE
+ee5df87a5f69   nginx     "/docker-entrypoint.…"   9 minutes ago   Exited (0) 9 minutes ago             hungry_leakey         1.09kB (virtual 133MB)
+5b30b34539d6   nginx     "/docker-entrypoint.…"   9 minutes ago   Exited (0) 9 minutes ago             magical_antonelli     1.09kB (virtual 133MB)
+0e9de31cf39e   nginx     "/docker-entrypoint.…"   9 minutes ago   Up 9 minutes               80/tcp    practical_mendeleev   1.09kB (virtual 133MB)
+]777;notify;Command completed;docker ps -as\]777;precmd\]0;veikko@blackstorm:~/workspace/devops-with-docker/part1_new\]7;file://blackstorm/home/veikko/workspace/devops-with-docker/part1_new\[[0;36mveikko@blackstorm[m: …/workspace/devops-with-docker/part1_new[0;36m[m]
+ [1;36m└─[m$ docker stop 0e
+]777;preexec\0e
+]777;notify;Command completed;docker stop 0e\]777;precmd\]0;veikko@blackstorm:~/workspace/devops-with-docker/part1_new\]7;file://blackstorm/home/veikko/workspace/devops-with-docker/part1_new\[[0;36mveikko@blackstorm[m: …/workspace/devops-with-docker/part1_new[0;36m[m]
+ [1;36m└─[m$ docker system pu[Krune
+]777;preexec\WARNING! This will remove:
+  - all stopped containers
+  - all networks not used by at least one container
+  - all dangling images
+  - all dangling build cache
+
+Are you sure you want to continue? [y/N] y
+Deleted Containers:
+ee5df87a5f693253472b28c429e5e4abdac1248f41e6771018cf7d184bb49a44
+5b30b34539d6364b33677d1792e91f8509f93e8ea54b92bba1525e3cd176f9ab
+0e9de31cf39e67b47737fc1bf3a22aaf609be64a3d71e9c5901d06e56d65cb3b
+
+Total reclaimed space: 3.279kB
+]777;notify;Command completed;docker system prune\]777;precmd\]0;veikko@blackstorm:~/workspace/devops-with-docker/part1_new\]7;file://blackstorm/home/veikko/workspace/devops-with-docker/part1_new\[[0;36mveikko@blackstorm[m: …/workspace/devops-with-docker/part1_new[0;36m[m]
+ [1;36m└─[m$ docker ps -a
+]777;preexec\CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+]777;notify;Command completed;docker ps -a\]777;precmd\]0;veikko@blackstorm:~/workspace/devops-with-docker/part1_new\]7;file://blackstorm/home/veikko/workspace/devops-with-docker/part1_new\[[0;36mveikko@blackstorm[m: …/workspace/devops-with-docker/part1_new[0;36m[m]
+ [1;36m└─[m$ docker images
+]777;preexec\REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+nginx        latest    d1a364dc548d   11 days ago   133MB
+]777;notify;Command completed;docker images\]777;precmd\]0;veikko@blackstorm:~/workspace/devops-with-docker/part1_new\]7;file://blackstorm/home/veikko/workspace/devops-with-docker/part1_new\[[0;36mveikko@blackstorm[m: …/workspace/devops-with-docker/part1_new[0;36m[m]
+ [1;36m└─[m$ docker image rm nginx
+]777;preexec\Untagged: nginx:latest
+Untagged: nginx@sha256:6d75c99af15565a301e48297fa2d121e15d80ad526f8369c526324f0f7ccb750
+Deleted: sha256:d1a364dc548d5357f0da3268c888e1971bbdb957ee3f028fe7194f1d61c6fdee
+Deleted: sha256:fcc8faba78fe8a1f75025781c8fa1841079b75b54fce8408d039f73a48b7a81b
+Deleted: sha256:a476b265974ace4c857e3d88b358e848f126297a8249840c72d5f5ea1954a4bf
+Deleted: sha256:56722ee1ee7e73a5c6f96ea2959fa442fb4db9f044399bcd939bb0a6eb7919dc
+Deleted: sha256:c657df997c75f6c1a9c5cc683e8e34c6f29e5b4c1dee60b632d3477fd5fdd644
+Deleted: sha256:e9e1f772d2a8dbbeb6a4a4dcb4f0d07ff1c432bf94fac7a2db2216837bf9ec5b
+Deleted: sha256:02c055ef67f5904019f43a41ea5f099996d8e7633749b6e606c400526b2c4b33
+]777;notify;Command completed;docker image rm nginx\]777;precmd\]0;veikko@blackstorm:~/workspace/devops-with-docker/part1_new\]7;file://blackstorm/home/veikko/workspace/devops-with-docker/part1_new\[[0;36mveikko@blackstorm[m: …/workspace/devops-with-docker/part1_new[0;36m[m]
+ [1;36m└─[m$ docker image rm nginxs[K
+]777;preexec\REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+]777;notify;Command completed;docker images\]777;precmd\]0;veikko@blackstorm:~/workspace/devops-with-docker/part1_new\]7;file://blackstorm/home/veikko/workspace/devops-with-docker/part1_new\[[0;36mveikko@blackstorm[m: …/workspace/devops-with-docker/part1_new[0;36m[m]
+ [1;36m└─[m$ exit
+]777;preexec\exit
+
+Script done on 2021-06-06 10:53:15+03:00 [COMMAND_EXIT_CODE="0"]

@@ -1,0 +1,8 @@
+1.9: Volumes
+
+As noted in the course material, if the file pointed to with the bind mount incantation does not exist it gets created as a directory. To circumvent possible issues I chose to create the file in the command using `touch` command.
+
+
+The command used:
+
+touch text.log && docker run -v "$(pwd)/text.log:/usr/src/app/text.log" devopsdockeruh/simple-web-service

@@ -1,0 +1,16 @@
+Script started on 2021-06-06 18:51:48+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="114" LINES="24"]
+]777;notify;Command completed;exit\]777;precmd\]0;veikko@blackstorm:~/workspace/devops-with-docker/part1_new\]7;file://blackstorm/home/veikko/workspace/devops-with-docker/part1_new\[[0;36mveikko@blackstorm[m: …/workspace/devops-with-docker/part1_new[0;36m[m]
+ [1;36m└─[m$ docker run devopsdockeruh/simple-web-service:web-server
+]777;preexec\[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /*path                    --> server.Start.func1 (3 handlers)
+[GIN-debug] Listening and serving HTTP on :8080
+^C]777;notify;Command completed;docker run devopsdockeruh/simple-web-service:web-server\]777;precmd\]0;veikko@blackstorm:~/workspace/devops-with-docker/part1_new\]7;file://blackstorm/home/veikko/workspace/devops-with-docker/part1_new\[[0;36mveikko@blackstorm[m: …/workspace/devops-with-docker/part1_new[0;36m[m]
+ [1;36m└─[m$ exit
+]777;preexec\exit
+
+Script done on 2021-06-06 18:51:57+03:00 [COMMAND_EXIT_CODE="2"]

@@ -1,0 +1,62 @@
+Script started on 2021-06-06 14:27:05+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="116" LINES="26"]
+]777;notify;Command completed;exit\]777;precmd\]0;veikko@blackstorm:~/workspace/devops-with-docker/part1_new\]7;file://blackstorm/home/veikko/workspace/devops-with-docker/part1_new\[[0;36mveikko@blackstorm[m: …/workspace/devops-with-docker/part1_new[0;36m[m]
+ [1;36m└─[m$ docker run -d --name ubu devopsdockeruh/simple-web-service:ubuntu
+]777;preexec\837fbdbc4bb0a6719a63f704ec4c14c7c5504d80e99507e243fff484c8866f84
+]777;notify;Command completed;docker run -d --name ubu devopsdockeruh/simple-web-service:ubuntu\]777;precmd\]0;veikko@blackstorm:~/workspace/devops-with-docker/part1_new\]7;file://blackstorm/home/veikko/workspace/devops-with-docker/part1_new\[[0;36mveikko@blackstorm[m: …/workspace/devops-with-docker/part1_new[0;36m[m]
+ [1;36m└─[m$  docker run -d --name alp devopsdockeruh/simple-web-service:alpine
+]777;preexec\28c78be04d154b140b99840c16b976d9fdb1c12b8768bdbc6f13db856afa8076
+]777;notify;Command completed;docker run -d --name ubu devopsdockeruh/simple-web-service:ubuntu\]777;precmd\]0;veikko@blackstorm:~/workspace/devops-with-docker/part1_new\]7;file://blackstorm/home/veikko/workspace/devops-with-docker/part1_new\[[0;36mveikko@blackstorm[m: …/workspace/devops-with-docker/part1_new[0;36m[m]
+ [1;36m└─[m$ docker exec -it ubu bash
+]777;preexec\]0;root@837fbdbc4bb0: /usr/src/approot@837fbdbc4bb0:/usr/src/app# logs -f text.log 
+bash: logs: command not found
+]0;root@837fbdbc4bb0: /usr/src/approot@837fbdbc4bb0:/usr/src/app# tail -f text.log 
+2021-06-06 11:27:20 +0000 UTC
+2021-06-06 11:27:22 +0000 UTC
+2021-06-06 11:27:24 +0000 UTC
+2021-06-06 11:27:26 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2021-06-06 11:27:28 +0000 UTC
+2021-06-06 11:27:30 +0000 UTC
+2021-06-06 11:27:32 +0000 UTC
+2021-06-06 11:27:34 +0000 UTC
+2021-06-06 11:27:36 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2021-06-06 11:27:38 +0000 UTC
+2021-06-06 11:27:40 +0000 UTC
+2021-06-06 11:27:42 +0000 UTC
+^C
+]0;root@837fbdbc4bb0: /usr/src/approot@837fbdbc4bb0:/usr/src/app# exit
+exit
+]777;notify;Command completed;docker exec -it ubu bash\]777;precmd\]0;veikko@blackstorm:~/workspace/devops-with-docker/part1_new\]7;file://blackstorm/home/veikko/workspace/devops-with-docker/part1_new\[[0;36mveikko@blackstorm[m: …/workspace/devops-with-docker/part1_new[0;36m[m]
+ [1;36m└─[m$ docker exec -it alp sh
+]777;preexec\/usr/src/app # [6n/usr/src/app # [Jgrep -i secret -[J./te/usr/src/app # grep -i secret ./text.log [J
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+/usr/src/app # [6ntail -f tex/usr/src/app # tail -f text.log [J
+2021-06-06 11:27:47 +0000 UTC
+2021-06-06 11:27:49 +0000 UTC
+2021-06-06 11:27:51 +0000 UTC
+2021-06-06 11:27:53 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2021-06-06 11:27:55 +0000 UTC
+2021-06-06 11:27:57 +0000 UTC
+2021-06-06 11:27:59 +0000 UTC
+2021-06-06 11:28:01 +0000 UTC
+2021-06-06 11:28:03 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2021-06-06 11:28:05 +0000 UTC
+2021-06-06 11:28:07 +0000 UTC
+^C
+/usr/src/app # [6nexit
+]777;notify;Command completed;docker exec -it alp sh\]777;precmd\]0;veikko@blackstorm:~/workspace/devops-with-docker/part1_new\]7;file://blackstorm/home/veikko/workspace/devops-with-docker/part1_new\[[0;36mveikko@blackstorm[m: …/workspace/devops-with-docker/part1_new[0;36m[m]
+ [1;36m└─[m$ docker images
+]777;preexec\REPOSITORY                          TAG       IMAGE ID       CREATED        SIZE
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   2 months ago   83MB
+devopsdockeruh/simple-web-service   alpine    fd312adc88e0   2 months ago   15.7MB
+]777;notify;Command completed;docker images\]777;precmd\]0;veikko@blackstorm:~/workspace/devops-with-docker/part1_new\]7;file://blackstorm/home/veikko/workspace/devops-with-docker/part1_new\[[0;36mveikko@blackstorm[m: …/workspace/devops-with-docker/part1_new[0;36m[m]
+ [1;36m└─[m$ exit
+]777;preexec\exit
+
+Script done on 2021-06-06 14:28:16+03:00 [COMMAND_EXIT_CODE="0"]

@@ -1,0 +1,36 @@
+# Latest LTS for node 14
+FROM node:14
+
+EXPOSE 5000
+
+# App directory
+WORKDIR /usr/src/app
+
+# Declare our environment variables
+ENV REACT_APP_BACKEND_URL=http://localhost:8080
+
+# Copy (all) content from the project to the image
+COPY . .
+
+# install all packages
+RUN npm install
+
+# fix found vulnerabilities
+RUN npm audit fix
+
+# build static files
+RUN npm run build
+
+
+# install and set serve
+RUN npm install -g serve
+
+# -s, --single rewrite all not-found requests to 'index.html'
+# -l, --listen Specify a URI endpoint on which to listen
+# I reckon build is the folder here
+CMD serve -s -l 5000 build
+
+
+
+# Run from generated jar-package
+# CMD java -jar ./target/docker-example-1.1.3.jar

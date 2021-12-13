@@ -1,0 +1,17 @@
+1.8: Image for script
+
+
+Script file content:
+	#!/bin/sh
+	read -p 'Input website: ' website
+	echo Searching.. $website
+	sleep 1
+	curl http://$website
+
+
+Docker image was build by chanting:
+	docker build -f ./Dockerfile_1_8 . -t curler
+
+
+And image was run by:
+	docker run -it curler

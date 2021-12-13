@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+
+    ml-kurkkumopo-fronted:
+      build:
+        context: ml-kurkkumopo-frontend/
+        dockerfile: Dockerfile
+      ports:
+        - '3000:3000'
+      container_name: kurkkumopo-frontend
+      depends_on:
+        - ml-kurkkumopo-backend
+
+    ml-kurkkumopo-backend:
+      build:
+        context: ml-kurkkumopo-backend/
+        dockerfile: Dockerfile
+      ports:
+        - '5000:5000'
+      volumes:
+        - model:/src/model # backend should share /src/model with training
+      container_name: kurkkumopo-backend
+      depends_on:
+        - ml-kurkkumopo-training
+
+
+    ml-kurkkumopo-training:
+      build:
+        context: ml-kurkkumopo-training/
+        dockerfile: Dockerfile
+      volumes:
+        - model:/src/model
+        - images:/src/imgs
+      container_name: kurkkumopo-training
+
+volumes:
+    model:
+    images:

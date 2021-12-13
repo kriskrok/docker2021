@@ -1,0 +1,5 @@
+2.5: Scaling exercise
+
+Command used:
+
+docker-compose up -d --scale compute=3

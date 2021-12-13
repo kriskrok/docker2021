@@ -1,0 +1,8 @@
+1.13: Hello, backend!
+
+
+Commands used:
+
+$ docker build -f ./Dockerfile_1.13 -t example-backend:dockerized .
+
+$ docker run -d -p 8080:8080/tcp --name back example-backend:dockerized

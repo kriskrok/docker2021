@@ -1,0 +1,9 @@
+1.4: Missing dependencies
+
+
+I chose to append the curl installation to the script and thus had no need to manually enter the container and install curl from inside.
+
+
+Command used:
+
+docker run --rm --name missing -it ubuntu:latest sh -c 'apt-get update && apt-get -y install curl; echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'

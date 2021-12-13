@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+
+    example-frontend:
+      build:
+        context: example-frontend/
+        dockerfile: Dockerfile_1.12
+      environment:
+        REACT_APP_BACKEND_URL: "${REACT_APP_BACKEND_URL:-http://localhost:8080}"
+      ports:
+        - '5000:5000'
+      container_name: example-fronted-composed
+
+    example-backend:
+      build:
+        context: example-backend/
+        dockerfile: Dockerfile_1.13
+      environment:
+        REDIS_HOST: "${REDIS_HOST:-example-redis}"
+        POSTGRES_HOST: "${POSTGRES_HOST:-example-postgres}"
+        POSTGRES_PASSWORD: "${POSTGRES_PASSWORD:-sergtsop}"
+        POSTGRES_DATABASE: "${POSTGRES_DATABASE:-sergtsop}"
+      ports:
+        - '8080:8080'
+      container_name: example-backend-composed
+      depends_on:
+        - postgres
+        - redis
+
+    redis:
+      image: redis
+      restart: unless-stopped
+      container_name: example-redis
+
+    postgres:
+      image: postgres:alpine
+      restart: unless-stopped
+      environment:
+        POSTGRES_PASSWORD: sergtsop
+        POSTGRES_DB: sergtsop
+      container_name: example-postgres

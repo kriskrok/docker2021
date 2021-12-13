@@ -1,0 +1,11 @@
+Script started on 2021-06-19 15:28:40+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="84" LINES="23"]
+]777;notify;Command completed;exit\]777;precmd\]0;veikko@blackstorm:~/workspace/devops-with-docker/part1_new\]7;file://blackstorm/home/veikko/workspace/devops-with-docker/part1_new\[[0;36mveikko@blackstorm[m: …/workspace/devops-with-docker/part1_new[0;36m[m]
+ [1;36m└─[m$ docker run -d -p 49123:8080/tcp simple-web-service:web-server
+]777;preexec\8fde893615b15cb180069c7b307284ae2576106376aad10d0221f53ca6924a0b
+]777;notify;Command completed;docker run -d -p 49123:8080/tcp simple-web-service:web-server\]777;precmd\]0;veikko@blackstorm:~/workspace/devops-with-docker/part1_new\]7;file://blackstorm/home/veikko/workspace/devops-with-docker/part1_new\[[0;36mveikko@blackstorm[m: …/workspace/devops-with-docker/part1_new[0;36m[m]
+ [1;36m└─[m$ curl http://localhost:49123
+]777;preexec\{"message":"You connected to the following path: /","path":"/"}]777;notify;Command completed;curl http://localhost:49123\]777;precmd\]0;veikko@blackstorm:~/workspace/devops-with-docker/part1_new\]7;file://blackstorm/home/veikko/workspace/devops-with-docker/part1_new\[[0;36mveikko@blackstorm[m: …/workspace/devops-with-docker/part1_new[0;36m[m]
+ [1;36m└─[m$ exit
+]777;preexec\exit
+
+Script done on 2021-06-19 15:28:58+03:00 [COMMAND_EXIT_CODE="0"]

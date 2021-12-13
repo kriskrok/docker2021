@@ -1,0 +1,3 @@
+2.10:
+
+Ran into CORS error when trying to submit message fron the frontend. This was resolved with adding REQUEST_ORIGIN: "http://localhost" as a ENV variable for the backend.

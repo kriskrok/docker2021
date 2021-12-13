@@ -1,0 +1,5 @@
+2.2:
+
+Command used:
+
+docker-compose -f ./docker-compose_2.2.yaml up

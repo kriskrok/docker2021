@@ -1,0 +1,17 @@
+1.5: Sized of images
+
+
+Both images can conviniently be pulled by using the run command:
+	docker run -d --name ubu devopsdockeruh/simple-web-service:ubuntu
+	docker run -d --name alp devopsdockeruh/simple-web-service:alpine
+
+
+We can enter the alpine container and check that the secret message functionality is the same with:
+	docker exec -it alp sh
+	tail -f ./text.log
+
+
+Lastly, we can compare the image sized by listing images with `docker images`:
+REPOSITORY                          TAG       IMAGE ID       CREATED        SIZE
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   2 months ago   83MB
+devopsdockeruh/simple-web-service   alpine    fd312adc88e0   2 months ago   15.7MB

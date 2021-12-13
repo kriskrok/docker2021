@@ -1,0 +1,9 @@
+1.7: Two line Dockerfile
+
+
+Image was build with the command:
+	docker build -f ./Dockerfile_1_7 . -t devopsdockeruh/simple-web-service:web-server
+
+
+And the container can be run with:
+	docker run devopsdockeruh/pull_exercise:web-server
